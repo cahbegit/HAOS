@@ -21,3 +21,5 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 influxdb: !include influxdb.yaml
+recorder:
+  purge_keep_days: 30

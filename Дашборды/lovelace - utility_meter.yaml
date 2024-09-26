@@ -296,9 +296,9 @@ cards:
             - type: custom:mushroom-template-card
               primary: Холодильник
               secondary: |-
-                    Мощность - {{states ('sensor.0x60a423fffe7ff8c8_power')}} Вт
+                    Мощность - {{states ('sensor.kholodilnik_power_2')}} Вт
               layout: horizontal
-              entity: sensor.0x60a423fffe7ff8c8_power
+              entity: sensor.kholodilnik_power_2
               icon_color: indigo
               icon: mdi:home-lightning-bolt
               tap_action:
@@ -421,18 +421,18 @@ cards:
                           entity_id: input_button.fridge_night
               
 
-################# Рабочее место #################
+################# All Pro #################
 
         - type: custom:stack-in-card
           mode: vertical
           cards:
 
             - type: custom:mushroom-template-card
-              primary: Рабочее место
+              primary: All Pro
               secondary: |-
-                    Мощность - {{states ('sensor.0xa4c138716822e6a7_power')}} Вт
+                    Мощность - {{states ('sensor.all_in_pro_power_2')}} Вт
               layout: horizontal
-              entity: sensor.0xa4c138716822e6a7_power
+              entity: sensor.all_in_pro_power_2
               icon_color: indigo
               icon: mdi:home-lightning-bolt
               tap_action:
@@ -518,7 +518,7 @@ cards:
               type: custom:mushroom-select-card
               entity: select.workplace
               layout: horizontal
-              name: Тариф рабочее место
+              name: Тариф All Pro
               secondary_info: none
 
         - type: conditional
@@ -563,9 +563,9 @@ cards:
             - type: custom:mushroom-template-card
               primary: Освещение
               secondary: |-
-                    Мощность - {{states ('sensor.0x086bd7fffe3f4a24_power')}} Вт
+                    Мощность - {{states ('sensor.svet_pitanie_power_2')}} Вт
               layout: horizontal
-              entity: sensor.0x086bd7fffe3f4a24_power
+              entity: sensor.svet_pitanie_power_2
               icon_color: indigo
               icon: mdi:home-lightning-bolt
               tap_action:

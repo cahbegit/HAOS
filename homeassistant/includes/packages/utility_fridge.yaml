@@ -2,12 +2,12 @@ utility_fridge:
 
     homeassistant:
       customize:
-        sensor.0x60a423fffe7ff8c8_power:
+        sensor.holodilnik_power_2:
           friendly_name: Холодильник мощность
           unit_of_measurement: Вт
           device_class: power
           icon: mdi:fridge
-        sensor.0x60a423fffe7ff8c8_energy:
+        sensor.holodilnik_energy:
           friendly_name: Холодильник энергия
           icon: mdi:chart-line
 
@@ -37,16 +37,10 @@ utility_fridge:
           icon: mdi:cash-fast
           unit_of_measurement: грн
 
-    recorder:
-      include:
-        entities:
-           - sensor.0x60a423fffe7ff8c8_power
-
-
     utility_meter:
 
       fridge:
-        source: sensor.0x60a423fffe7ff8c8_energy
+        source: sensor.holodilnik_energy
         cycle: monthly
         offset:
           days: 0
@@ -55,6 +49,15 @@ utility_fridge:
         tariffs:
           - night
           - day
+
+    sensor:
+
+      - platform: integration
+        name: 'holodilnik_energy'
+        source: sensor.holodilnik_power_2
+        unit_prefix: k
+        method: left
+        round: 2
 
     input_text:
 
@@ -106,7 +109,6 @@ utility_fridge:
                 {% else  %}
                 {{ states('sensor.fridge_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }}
                 {% endif %}
-
 
     automation:
     

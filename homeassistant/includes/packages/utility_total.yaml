@@ -58,11 +58,6 @@ utility_total:
           icon: mdi:cash-fast
           unit_of_measurement: грн
 
-    recorder:
-      include:
-        entities:
-           - sensor.total_power
-
     input_datetime:
     
       night_start:
@@ -170,17 +165,20 @@ utility_total:
           - name: total_energy
             state: >
                 {{(
-                   states('sensor.0xa4c138716822e6a7_energy')|float(0) +
-                   states('sensor.0x60a423fffe7ff8c8_energy')|float(0) +
-                   states('sensor.0x086bd7fffe3f4a24_energy')|float(0)
+                   states('sensor.all_in_pro_energy')|float(0) +
+                   states('sensor.sensor.holodilnik_energy')|float(0) +
+                   states('sensor.svet_pitanie_energy')|float(0)
                   )|round(2)}}
                   
           - name: total_power
             state: >
                 {{(
-                   states('sensor.0xa4c138716822e6a7_power')|float(0) +
-                   states('sensor.0x60a423fffe7ff8c8_power')|float(0) +
-                   states('sensor.0x086bd7fffe3f4a24_power')|float(0)
+                   states('sensor.svet_platy_power_2')|float(0) +
+                   states('sensor.svet_pitanie_power_2')|float(0) +
+                   states('sensor.internet_power_2')|float(0) +
+                   states('sensor.all_in_pro_power_2')|float(0) +
+                   states('sensor.kholodilnik_power_2')|float(0) +
+                   states('sensor.kotel_power_2')|float(0)
                   )|round(2)}}
 
           - name: counter_energy_clear
@@ -219,8 +217,7 @@ utility_total:
                 {% else  %}
                 {{ states('sensor.meter_total_energy_night')|float * states('input_text.off_limit')|float * states('input_text.night_coefficient')|float }}
                 {% endif %}
-                
-                
+                               
     automation:
     
       - alias: counter_energy_calibrate

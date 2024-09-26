@@ -2,12 +2,12 @@ utility_light_kn:
 
     homeassistant:
       customize:
-        sensor.0x086bd7fffe3f4a24_power:
+        sensor.svet_pitanie_power_2:
           friendly_name: Освещение мощность
           unit_of_measurement: Вт
           device_class: power
           icon: mdi:laptop
-        sensor.0x086bd7fffe3f4a24_energy:
+        sensor.svet_pitanie_energy:
           friendly_name: Освещение энергия
           icon: mdi:chart-line
 
@@ -36,16 +36,11 @@ utility_light_kn:
           friendly_name: Освещение ночь
           icon: mdi:cash-fast
           unit_of_measurement: грн
-          
-    recorder:
-      include:
-        entities:
-           - sensor.0x086bd7fffe3f4a24_power
 
     utility_meter:
 
       light_kn:
-        source: sensor.0x086bd7fffe3f4a24_energy
+        source: sensor.svet_pitanie_energy
         cycle: monthly
         offset:
           days: 0
@@ -58,9 +53,10 @@ utility_light_kn:
     sensor:
 
       - platform: integration
-        name: '0x086bd7fffe3f4a24_energy'
-        source: sensor.0x086bd7fffe3f4a24_power
+        name: 'svet_pitanie_energy'
+        source: sensor.svet_pitanie_power_2
         unit_prefix: k
+        method: left
         round: 2
 
     input_text:
@@ -82,14 +78,6 @@ utility_light_kn:
     template:
     
       - sensor:
-
-          - name: '0x086bd7fffe3f4a24_power'
-            state: >
-                {% if states('light.0x086bd7fffe3f4a24') == 'on' %}
-                100
-                {% else  %}
-                0
-                {% endif %}
 
           - name: light_kn_clear
             state: >
