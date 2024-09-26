@@ -1,0 +1,176 @@
+type: picture-elements
+elements:
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_1
+    icon: ''
+    style:
+      left: 25.3%
+      top: 76.4%
+    tap_action:
+      action: toggle
+    title: Калидор
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_6
+    icon: ''
+    style:
+      left: 51.5%
+      top: 78.6%
+    tap_action:
+      action: toggle
+    title: Спальня центр
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_4
+    icon: ''
+    style:
+      left: 45.6%
+      top: 46.2%
+    tap_action:
+      action: toggle
+    title: Зал центр
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_1
+    icon: ''
+    style:
+      left: 15.5%
+      top: 42.6%
+    tap_action:
+      action: toggle
+    title: Складовка
+    hold_action:
+      action: more-info
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_5
+    icon: ''
+    style:
+      left: 33%
+      top: 46.2%
+    tap_action:
+      action: toggle
+    title: Зал лево
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_5
+    icon: ''
+    style:
+      left: 58.2%
+      top: 46.3%
+    tap_action:
+      action: toggle
+    title: Зал право
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_8
+    icon: ''
+    style:
+      left: 81.2%
+      top: 41.6%
+    tap_action:
+      action: toggle
+    title: Зал болкон
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_2
+    icon: mdi:fan
+    style:
+      left: 17%
+      top: 31%
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    title: Вытяжка гардероб
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_3
+    icon: mdi:fan
+    style:
+      left: 12%
+      top: 6.5%
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    title: Вытяжка ванна
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_7
+    icon: ''
+    style:
+      left: 80.8%
+      top: 17.6%
+    tap_action:
+      action: toggle
+    title: Кухня балкон
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_5
+    icon: ''
+    style:
+      left: 40.8%
+      top: 22%
+    tap_action:
+      action: toggle
+    title: Кухня лево
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_5
+    icon: ''
+    style:
+      left: 60.7%
+      top: 22.3%
+    tap_action:
+      action: toggle
+    title: Кухня право
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_2
+    icon: ''
+    style:
+      left: 24.7%
+      top: 24.9%
+    tap_action:
+      action: toggle
+    title: Ванна 1
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_3
+    icon: ''
+    style:
+      left: 13.9%
+      top: 24.9%
+    tap_action:
+      action: toggle
+    title: Ванна 2
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_3
+    icon: ''
+    style:
+      left: 25%
+      top: 14%
+    tap_action:
+      action: toggle
+    title: Ванна 2
+  - type: state-icon
+    entity: light.2_ty_12z_vykliuchatel_4
+    icon: ''
+    style:
+      left: 12%
+      top: 12%
+    tap_action:
+      action: toggle
+    title: Душ
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_7
+    icon: ''
+    tap_action:
+      action: toggle
+    title: Спальня бра лево
+    style:
+      left: 57.5%
+      top: 93%
+  - type: state-icon
+    entity: light.1_ty_12z_vykliuchatel_8
+    icon: ''
+    tap_action:
+      action: toggle
+    title: Спальня бра право
+    style:
+      left: 47.5%
+      top: 93%
+image: /api/image/serve/78d293a0c04317e6d908550410938607/512x512
+camera_view: auto
+title: Свет
+dark_mode_image: /api/image/serve/20011a3f1561a697c7e6a8c4f9516aeb/512x512
+view_layout:
+  position: main

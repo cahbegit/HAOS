@@ -1,0 +1,369 @@
+title: Home
+cards:
+  - show_current: true
+    show_forecast: true
+    type: weather-forecast
+    entity: weather.forecast_home_assistant
+    forecast_type: daily
+    secondary_info_attribute: humidity
+  - type: tile
+    entity: sensor.sun_next_dawn
+  - type: entities
+    entities:
+      - entity: sensor.all_in_pro_power
+      - entity: sensor.all_in_pro_voltage
+      - entity: sensor.all_in_pro_current
+    header:
+      type: graph
+      entity: sensor.all_in_pro_power
+      detail: 1
+  - type: picture-elements
+    elements:
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_1
+        icon: ""
+        style:
+          left: 25.3%
+          top: 76.4%
+        tap_action:
+          action: toggle
+        title: Калидор
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_6
+        icon: ""
+        style:
+          left: 51.5%
+          top: 78.6%
+        tap_action:
+          action: toggle
+        title: Спальня центр
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_4
+        icon: ""
+        style:
+          left: 45.6%
+          top: 46.2%
+        tap_action:
+          action: toggle
+        title: Зал центр
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_1
+        icon: ""
+        style:
+          left: 15.5%
+          top: 42.6%
+        tap_action:
+          action: toggle
+        title: Складовка
+        hold_action:
+          action: more-info
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_5
+        icon: ""
+        style:
+          left: 33%
+          top: 46.2%
+        tap_action:
+          action: toggle
+        title: Зал лево
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_5
+        icon: ""
+        style:
+          left: 58.2%
+          top: 46.3%
+        tap_action:
+          action: toggle
+        title: Зал право
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_8
+        icon: ""
+        style:
+          left: 81.2%
+          top: 41.6%
+        tap_action:
+          action: toggle
+        title: Зал болкон
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_2
+        icon: mdi:fan
+        style:
+          left: 17%
+          top: 31%
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        title: Вытяжка гардероб
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_3
+        icon: mdi:fan
+        style:
+          left: 12%
+          top: 6.5%
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        title: Вытяжка ванна
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_7
+        icon: ""
+        style:
+          left: 80.8%
+          top: 17.6%
+        tap_action:
+          action: toggle
+        title: Кухня балкон
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_5
+        icon: ""
+        style:
+          left: 40.8%
+          top: 22%
+        tap_action:
+          action: toggle
+        title: Кухня лево
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_5
+        icon: ""
+        style:
+          left: 60.7%
+          top: 22.3%
+        tap_action:
+          action: toggle
+        title: Кухня право
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_2
+        icon: ""
+        style:
+          left: 24.7%
+          top: 24.9%
+        tap_action:
+          action: toggle
+        title: Ванна 1
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_3
+        icon: ""
+        style:
+          left: 13.9%
+          top: 24.9%
+        tap_action:
+          action: toggle
+        title: Ванна 2
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_3
+        icon: ""
+        style:
+          left: 25%
+          top: 14%
+        tap_action:
+          action: toggle
+        title: Ванна 2
+      - type: state-icon
+        entity: light.2_ty_12z_vykliuchatel_4
+        icon: ""
+        style:
+          left: 12%
+          top: 12%
+        tap_action:
+          action: toggle
+        title: Душ
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_7
+        icon: ""
+        tap_action:
+          action: toggle
+        title: Спальня бра лево
+        style:
+          left: 57.5%
+          top: 93%
+      - type: state-icon
+        entity: light.1_ty_12z_vykliuchatel_8
+        icon: ""
+        tap_action:
+          action: toggle
+        title: Спальня бра право
+        style:
+          left: 47.5%
+          top: 93%
+    image: /api/image/serve/78d293a0c04317e6d908550410938607/512x512
+    camera_view: auto
+    title: Свет
+    dark_mode_image: /api/image/serve/20011a3f1561a697c7e6a8c4f9516aeb/512x512
+    view_layout:
+      position: main
+  - type: entities
+    entities:
+      - entity: binary_sensor.motion_sensor_2_motion
+        name: Движение
+      - entity: sensor.motion_sensor_2_battery
+    title: Motion Sensor
+  - type: entities
+    entities:
+      - entity: sensor.svet_pitanie_power
+      - entity: sensor.svet_pitanie_voltage
+      - entity: sensor.svet_pitanie_current
+    header:
+      type: graph
+      entity: sensor.svet_pitanie_power
+      detail: 1
+  - type: entities
+    entities:
+      - entity: sensor.sun_next_midnight
+        name: Следующая полночь
+      - entity: sensor.sun_next_dusk
+        name: Следующие сумерки
+      - entity: sensor.sun_next_rising
+        name: Следующий восход
+      - entity: sensor.sun_next_setting
+        name: Следующий заход
+      - entity: sensor.sun_next_noon
+        name: Следующий полдень
+      - entity: sensor.sun_next_dawn
+        name: Следующий рассвет
+    title: Sun
+  - type: entities
+    entities:
+      - entity: calendar.yasno_group_5_outages_calendar
+        name: График отключений
+      - entity: sensor.yasno_group_5_next_connectivity
+        name: Следующая запитка
+      - entity: sensor.yasno_group_5_next_possible_outage
+        name: Следующее возможное отключение
+      - entity: sensor.yasno_group_5_next_outage
+        name: Следующее отключение
+      - entity: sensor.yasno_group_5_electricity
+        name: Электрика
+    title: Yasno Група 5
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.temperature_humidity_sensor_temperature
+        aggregate_func: max
+        name: Max
+        color: "#e74c3c"
+      - entity: sensor.temperature_humidity_sensor_temperature
+        aggregate_func: min
+        name: Min
+      - entity: sensor.temperature_humidity_sensor_temperature
+        aggregate_func: avg
+        name: Avg
+        color: green
+    name: Температура (неделя)
+    hours_to_show: 168
+    group_by: date
+  - type: grid
+    square: false
+    columns: 1
+    cards:
+      - type: entities
+        entities:
+          - remote.zaltv
+        title: ZalTv
+      - type: media-control
+        entity: media_player.samsung_q60ba_50_tv_2
+      - type: media-control
+        entity: media_player.zaltv
+  - card_mod:
+      style: |
+        ha-card {
+          color: red;
+        }
+        ha-card1 {
+          color: green;
+        }
+    type: entities
+    title: Yasno Група 5
+    entities:
+      - entity: calendar.yasno_group_5_outages_calendar
+        name: График отключений
+        style: |
+          :ha-card1  {
+            --paper-item-icon-color: red;
+            color: red;
+          }
+      - entity: sensor.yasno_group_5_next_connectivity
+        name: Следующая запитка
+        style: |
+          :host {
+            --paper-item-icon-color: green;
+            color: green;
+          }
+      - entity: sensor.yasno_group_5_next_possible_outage
+        name: Следующее возможное отключение
+        style: |
+          :host {
+            --paper-item-icon-color: orange;
+            color: orange;
+          }
+      - entity: sensor.yasno_group_5_next_outage
+        name: Следующее отключение
+        style: |
+          :host {
+            --paper-item-icon-color: blue;
+            color: blue;
+          }
+      - entity: sensor.yasno_group_5_electricity
+        name: Электрика
+        style: |
+          :host {
+            --paper-item-icon-color: purple;
+            color: purple;
+          }
+  - type: grid
+    square: false
+    columns: 1
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.ebzhik_area_cleaned
+            name: Area cleaned
+          - entity: sensor.ebzhik_cleaning_duration
+            name: Cleaning duration
+          - entity: sensor.ebzhik_total_area_cleaned
+            name: Total area cleaned
+          - entity: sensor.ebzhik_total_cleaning_duration
+            name: Total cleaning duration
+          - entity: sensor.ebzhik_total_cleanings
+            name: Total cleanings
+        title: Ёбжик
+      - type: picture
+        image_entity: image.ebzhik_map
+  - type: entities
+    entities:
+      - vacuum.ebzhik
+    title: Ёбжик
+  - type: entities
+    entities:
+      - entity: event.ebzhik_last_job
+        name: Last job
+      - entity: sensor.ebzhik_battery
+        name: Battery
+      - entity: sensor.ebzhik_filter_lifespan
+        name: Filter lifespan
+      - entity: sensor.ebzhik_main_brush_lifespan
+        name: Main brush lifespan
+      - entity: binary_sensor.ebzhik_mop_attached
+        name: Mop attached
+      - entity: sensor.ebzhik_side_brush_lifespan
+        name: Side brush lifespan
+    title: Ёбжик
+  - type: horizontal-stack
+    cards:
+      - type: custom:mushroom-entity-card
+        entity: device_tracker.poco_x5_pro_5g_2
+        name: Саша
+        icon: mdi:cellphone
+        icon_color: green
+      - type: custom:mushroom-entity-card
+        entity: device_tracker.xiaomi_11_lite_5g_ne
+        name: Лена
+        icon: mdi:cellphone
+        fill_container: false
+      - type: custom:mushroom-entity-card
+        entity: device_tracker.cahbenb
+        name: Саша ноут
+      - type: custom:mushroom-entity-card
+        entity: device_tracker.hellnb
+        name: Ленка Ноут
+subview: false

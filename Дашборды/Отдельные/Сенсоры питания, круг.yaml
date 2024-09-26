@@ -1,0 +1,92 @@
+type: horizontal-stack
+cards:
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: gauge
+            entity: sensor.svet_pitanie_power_2
+            unit: W
+            name: Свет питание
+            severity:
+              green: 50
+              yellow: 100
+              red: 150
+            max: 250
+            needle: true
+      - type: gauge
+        entity: sensor.kholodilnik_power_2
+        unit: W
+        severity:
+          green: 50
+          yellow: 100
+          red: 180
+        max: 200
+        needle: true
+        name: Холод
+  - type: vertical-stack
+    cards:
+      - type: gauge
+        entity: sensor.svet_platy_power_2
+        unit: W
+        name: 'Свет   _платы_ '
+        severity:
+          green: 500
+          yellow: 1000
+          red: 1500
+        max: 3000
+        needle: true
+      - type: gauge
+        entity: sensor.stiralka_power_2
+        unit: W
+        name: Стиралка
+        severity:
+          green: 500
+          yellow: 1000
+          red: 1500
+        max: 3000
+        needle: true
+  - type: vertical-stack
+    cards:
+      - type: gauge
+        entity: sensor.internet_power_2
+        unit: W
+        name: Интернет _____
+        severity:
+          green: 5
+          yellow: 10
+          red: 20
+        max: 30
+        needle: true
+      - type: gauge
+        unit: W
+        severity:
+          green: 50
+          yellow: 100
+          red: 200
+        max: 500
+        needle: true
+        entity: sensor.kotel_power_2
+        name: Котёл
+  - type: vertical-stack
+    cards:
+      - type: gauge
+        entity: sensor.all_in_pro_power_2
+        unit: W
+        name: Квартира _____
+        severity:
+          green: 500
+          yellow: 1000
+          red: 1500
+        max: 3000
+        needle: true
+      - type: gauge
+        entity: sensor.kholodilnik_power_2
+        unit: W
+        severity:
+          green: 500
+          yellow: 1000
+          red: 1500
+        max: 3000
+        needle: true
+        name: Холод
